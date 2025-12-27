@@ -10,40 +10,40 @@
 * {margin:0; padding:0; box-sizing:border-box; font-family:'Cairo',sans-serif; transition: all 0.3s ease;}
 body {overflow-x:hidden; scroll-behavior:smooth; background: linear-gradient(120deg,#ff9a9e,#fad0c4,#fbc2eb); color:#fff; min-height:100vh;}
 
-/* === Text Styles === */
+/* === Headings & Text === */
 h1,h2,h3 {text-align:center; font-weight:700; text-shadow:2px 2px 12px rgba(0,0,0,0.25);}
 p {text-align:center; margin:12px 20px; line-height:1.6; text-shadow:1px 1px 5px rgba(0,0,0,0.2);}
 a {text-decoration:none; color:#fff;}
 
 /* === Navigation === */
 nav {
-    position:fixed; top:0; width:100%; background: rgba(0,0,0,0.4); padding:12px 0; z-index:1000; backdrop-filter: blur(8px);
+    position:fixed; top:0; width:100%; background: rgba(0,0,0,0.4); padding:14px 0; z-index:1000; backdrop-filter: blur(8px);
 }
 nav ul {display:flex; justify-content:center; list-style:none; flex-wrap:wrap;}
 nav ul li {margin:0 15px; margin-bottom:5px;}
-nav ul li a {font-weight:600; padding:6px 10px; border-radius:8px;}
+nav ul li a {font-weight:600; padding:6px 14px; border-radius:8px;}
 nav ul li a:hover {color:#ffd700; background: rgba(255,255,255,0.1); cursor:pointer;}
 
 /* === Hero Section === */
 .hero {height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; overflow:hidden;}
-.hero h1 {font-size:3em; animation:fadeIn 2s ease-in-out;}
-.hero p {font-size:1.5em; animation:fadeIn 3s ease-in-out; margin-top:15px;}
+.hero h1 {font-size:3.2em; animation:fadeIn 2s ease-in-out; color:#fff;}
+.hero p {font-size:1.5em; animation:fadeIn 3s ease-in-out; margin-top:15px; color:#fff;}
 
 /* === Sections === */
-section {padding:90px 20px; min-height:90vh; text-align:center; background: rgba(0,0,0,0.15); margin-top:60px; border-radius:20px; margin-bottom:20px; backdrop-filter: blur(6px);}
+section {padding:100px 25px; min-height:90vh; text-align:center; background: rgba(0,0,0,0.12); margin-top:60px; border-radius:24px; margin-bottom:25px; backdrop-filter: blur(8px);}
 section:nth-child(even){background: rgba(0,0,0,0.05);}
-.section-title {font-size:2em; margin-bottom:20px;}
+.section-title {font-size:2.2em; margin-bottom:25px; text-decoration:underline; text-underline-offset:10px;}
 
 /* === Buttons === */
-button {padding:10px 22px; background:#ff6f91; border:none; border-radius:12px; cursor:pointer; font-size:1em; margin-top:20px; font-weight:600; box-shadow:0 4px 15px rgba(0,0,0,0.2);}
-button:hover {background:#ff3c78; transform:scale(1.05);}
+button {padding:12px 26px; background:#ff6f91; border:none; border-radius:14px; cursor:pointer; font-size:1em; margin-top:25px; font-weight:700; box-shadow:0 5px 18px rgba(0,0,0,0.25);}
+button:hover {background:#ff3c78; transform:scale(1.08);}
 
 /* === Top Button === */
-#topBtn {position:fixed; bottom:30px; right:30px; background:#ff3c78; color:#fff; padding:12px 18px; border:none; border-radius:50%; cursor:pointer; font-size:22px; display:none; z-index:1000; box-shadow:0 4px 10px rgba(0,0,0,0.3);}
-#topBtn:hover {background:#ff6f91; transform:scale(1.1);}
+#topBtn {position:fixed; bottom:30px; right:30px; background:#ff3c78; color:#fff; padding:14px 20px; border:none; border-radius:50%; cursor:pointer; font-size:24px; display:none; z-index:1000; box-shadow:0 4px 12px rgba(0,0,0,0.3);}
+#topBtn:hover {background:#ff6f91; transform:scale(1.12);}
 
 /* === Love Popup === */
-#lovePopup {position:fixed; bottom:50px; left:50%; transform:translateX(-50%); background:rgba(255,0,100,0.85); padding:22px 32px; border-radius:24px; box-shadow:0 0 25px rgba(255,0,100,0.7); color:#fff; font-weight:bold; display:none; z-index:1000; animation:popupAnim 0.8s ease-in-out;}
+#lovePopup {position:fixed; bottom:50px; left:50%; transform:translateX(-50%); background:rgba(255,0,100,0.85); padding:24px 36px; border-radius:26px; box-shadow:0 0 28px rgba(255,0,100,0.7); color:#fff; font-weight:bold; display:none; z-index:1000; animation:popupAnim 0.8s ease-in-out;}
 @keyframes popupAnim {0%{transform:translateX(-50%) translateY(50px);opacity:0;} 100%{transform:translateX(-50%) translateY(0);opacity:1;}}
 
 /* === Fade-in Animation === */
@@ -51,14 +51,14 @@ button:hover {background:#ff3c78; transform:scale(1.05);}
 .fade-in.show {opacity:1; transform:translateY(0) rotateX(0deg);}
 
 /* === Floating Effects === */
-.heart, .flower, .star {position:absolute; width:22px; height:22px; border-radius:50%; pointer-events:none; animation:float 5s linear infinite;}
+.heart, .flower, .star {position:absolute; width:24px; height:24px; border-radius:50%; pointer-events:none; animation:float 5s linear infinite;}
 .heart {background:linear-gradient(45deg,#ff3c78,#ff6f91);}
-.heart:after,.heart:before{content:"";position:absolute;width:22px;height:22px;border-radius:50%;background:linear-gradient(45deg,#ff3c78,#ff6f91);}
-.heart:before{top:-11px;left:0;}
-.heart:after{left:11px;top:0;}
+.heart:after,.heart:before{content:"";position:absolute;width:24px;height:24px;border-radius:50%;background:linear-gradient(45deg,#ff3c78,#ff6f91);}
+.heart:before{top:-12px;left:0;}
+.heart:after{left:12px;top:0;}
 .flower {background:radial-gradient(circle at center,#ffd1dc,#ff69b4);}
 .star {background:radial-gradient(circle at center,#fff200,#ffdd00);}
-@keyframes float {0%{transform:translateY(0) rotateY(0deg);opacity:1;}100%{transform:translateY(-850px) rotateY(360deg);opacity:0;}}
+@keyframes float {0%{transform:translateY(0) rotateY(0deg);opacity:1;}100%{transform:translateY(-900px) rotateY(360deg);opacity:0;}}
 
 /* === Background Animation === */
 @keyframes bgGradient {0%{background:#ff9a9e;}25%{background:#fad0c4;}50%{background:#fbc2eb;}75%{background:#a1c4fd;}100%{background:#ff9a9e;}}
@@ -66,17 +66,17 @@ body {animation:bgGradient 40s ease infinite;}
 
 /* === Responsive === */
 @media screen and (max-width:768px){
-  .hero h1{font-size:2.4em;}
-  .hero p{font-size:1.2em;}
-  section{padding:70px 15px;}
+  .hero h1{font-size:2.6em;}
+  .hero p{font-size:1.3em;}
+  section{padding:80px 18px;}
   nav ul{flex-direction:column;}
   nav ul li{margin:8px 0;}
-  button{padding:8px 18px; font-size:0.95em;}
+  button{padding:10px 20px; font-size:0.95em;}
 }
 @media screen and (max-width:480px){
-  .hero h1{font-size:1.9em;}
+  .hero h1{font-size:2.0em;}
   .hero p{font-size:1em;}
-  button{padding:6px 14px; font-size:0.85em;}
+  button{padding:8px 16px; font-size:0.85em;}
 }
 </style>
 </head>
@@ -96,11 +96,11 @@ body {animation:bgGradient 40s ease infinite;}
 <!-- Navigation -->
 <nav>
 <ul>
-<li><a href="#home">الرئيسية</a></li>
-<li><a href="#about">عن مريم</a></li>
-<li><a href="#love">حبي لها</a></li>
-<li><a href="#messages">رسائل حب</a></li>
-<li><a href="#dreams">أحلامنا</a></li>
+<li><a href="#home">الصفحة الرئيسية</a></li>
+<li><a href="#about">معلومات عن مريم</a></li>
+<li><a href="#love">قصة الحب</a></li>
+<li><a href="#messages">رسائل الحب</a></li>
+<li><a href="#dreams">أحلامنا المستقبلية</a></li>
 </ul>
 </nav>
 
@@ -111,7 +111,7 @@ body {animation:bgGradient 40s ease infinite;}
 </section>
 
 <section id="about">
-<h2 class="section-title fade-in">عن مريم</h2>
+<h2 class="section-title fade-in">معلومات عن مريم</h2>
 <p class="fade-in">الاسم: مريم</p>
 <p class="fade-in">تاريخ الميلاد: 21 نوفمبر 2008 (العمر: 17 سنة)</p>
 <p class="fade-in">المميزات: لطيفة، حنونة، محترمة، جميلة جدًا، ذكية وحنينية</p>
@@ -119,13 +119,13 @@ body {animation:bgGradient 40s ease infinite;}
 </section>
 
 <section id="love">
-<h2 class="section-title fade-in">حبي لها ❤️</h2>
+<h2 class="section-title fade-in">قصة الحب</h2>
 <p class="fade-in">رغم بعد المسافات والصعوبات، حبي لها يزداد يومًا بعد يوم.</p>
 <p class="fade-in">هذه المرة، أحببت حبًا صادقًا وعميقًا لم أشعر به من قبل.</p>
 </section>
 
 <section id="messages">
-<h2 class="section-title fade-in">رسائل حب لمريم</h2>
+<h2 class="section-title fade-in">رسائل الحب</h2>
 <p class="fade-in">"مريم، قلبي لك وحدك، وحبي لك أعظم من أي كلمات يمكن أن تصف"</p>
 <p class="fade-in">"كل لحظة أفكر فيك تجعلني أبتسم وأحلم بمستقبلنا معًا"</p>
 <button onclick="showRandomMessage()">رسالة عشوائية 💌</button>
@@ -139,98 +139,44 @@ body {animation:bgGradient 40s ease infinite;}
 </section>
 
 <script>
-// === Floating Elements ===
-function createElement(type){
-const el=document.createElement(type);
-el.style.left=Math.random()*window.innerWidth+'px';
-el.style.animationDuration=(3+Math.random()*5)+'s';
-document.body.appendChild(el);
-setTimeout(()=>el.remove(),5000);
-return el;
-}
+// Floating Elements
+function createElement(type){const el=document.createElement(type);el.style.left=Math.random()*window.innerWidth+'px';el.style.animationDuration=(3+Math.random()*5)+'s';document.body.appendChild(el);setTimeout(()=>el.remove(),5000);return el;}
 setInterval(()=>{createElement('div').className='heart';},300);
 setInterval(()=>{createElement('div').className='flower';},700);
 setInterval(()=>{createElement('div').className='star';},1000);
 
-// === Random Messages ===
+// Random Messages
 const messages=["مريم، أحبك أكثر من أي شيء ❤️","قلبي ملكك وحده 🌹","أنتِ نجمتي المضيئة ✨","حبي لك لا يعرف حدودًا 💖","كل يوم أحبك أكثر 💌"];
-function showRandomMessage(){
-const index=Math.floor(Math.random()*messages.length);
-const p=document.getElementById('randomMessage');
-p.innerText=messages[index];
-p.classList.add('show');
-setTimeout(()=>p.classList.remove('show'),2000);
-}
+function showRandomMessage(){const index=Math.floor(Math.random()*messages.length);const p=document.getElementById('randomMessage');p.innerText=messages[index];p.classList.add('show');setTimeout(()=>p.classList.remove('show'),2000);}
 
-// === Fade-in Observer ===
+// Fade-in Observer
 const faders=document.querySelectorAll('.fade-in');
 const appearOptions={threshold:0.5};
-const appearOnScroll=new IntersectionObserver(function(entries,observer){
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add('show');
-observer.unobserve(entry.target);
-}
-});
-},appearOptions);
+const appearOnScroll=new IntersectionObserver(function(entries,observer){entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('show');observer.unobserve(entry.target);}});},appearOptions);
 faders.forEach(fader=>appearOnScroll.observe(fader));
 
-// === Top Button ===
+// Top Button
 const topBtn=document.getElementById('topBtn');
 window.onscroll=function(){scrollFunction()};
-function scrollFunction(){
-if(document.body.scrollTop>400||document.documentElement.scrollTop>400){
-topBtn.style.display="block";
-}else{topBtn.style.display="none";}
-}
+function scrollFunction(){if(document.body.scrollTop>400||document.documentElement.scrollTop>400){topBtn.style.display="block";}else{topBtn.style.display="none";}}
 function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'});}
 
-// === Music & Click Sound ===
-const bgMusic=document.getElementById('bgMusic');
-const clickSound=document.getElementById('clickSound');
+// Music & Click Sound
+const bgMusic=document.getElementById('bgMusic');const clickSound=document.getElementById('clickSound');
 function toggleMusic(){if(bgMusic.paused){bgMusic.play();}else{bgMusic.pause();}}
 document.body.addEventListener('click',()=>{clickSound.play();});
 
-// === Click & Touch Hearts ===
-document.body.addEventListener('click',e=>{
-const heart=document.createElement('div');
-heart.className='heart';
-heart.style.left=e.clientX-12+'px';
-heart.style.top=e.clientY-12+'px';
-heart.style.animationDuration='2s';
-document.body.appendChild(heart);
-setTimeout(()=>heart.remove(),2000);
-});
-document.body.addEventListener('touchmove',e=>{
-for(let touch of e.touches){
-const heart=document.createElement('div');
-heart.className='heart';
-heart.style.left=touch.clientX-12+'px';
-heart.style.top=touch.clientY-12+'px';
-heart.style.animationDuration='2s';
-document.body.appendChild(heart);
-setTimeout(()=>heart.remove(),2000);
-}
-});
+// Click & Touch Hearts
+document.body.addEventListener('click',e=>{const heart=document.createElement('div');heart.className='heart';heart.style.left=e.clientX-12+'px';heart.style.top=e.clientY-12+'px';heart.style.animationDuration='2s';document.body.appendChild(heart);setTimeout(()=>heart.remove(),2000);});
+document.body.addEventListener('touchmove',e=>{for(let touch of e.touches){const heart=document.createElement('div');heart.className='heart';heart.style.left=touch.clientX-12+'px';heart.style.top=touch.clientY-12+'px';heart.style.animationDuration='2s';document.body.appendChild(heart);setTimeout(()=>heart.remove(),2000);}});
 
-// === Love Popup ===
+// Love Popup
 const lovePopup=document.getElementById('lovePopup');
-function showLovePopup(){
-const msg=messages[Math.floor(Math.random()*messages.length)];
-lovePopup.innerText=msg;
-lovePopup.style.display='block';
-setTimeout(()=>lovePopup.style.display='none',3000);
-}
+function showLovePopup(){const msg=messages[Math.floor(Math.random()*messages.length)];lovePopup.innerText=msg;lovePopup.style.display='block';setTimeout(()=>lovePopup.style.display='none',3000);}
 setInterval(showLovePopup,8000);
 
-// === Gyroscope Background ===
-if(window.DeviceOrientationEvent){
-window.addEventListener('deviceorientation',function(event){
-const x = event.gamma;
-const y = event.beta;
-document.body.style.background=`linear-gradient(${y+90}deg,#ff9a9e,#fad0c4,#fbc2eb)`;
-}, true);
-}
+// Gyroscope Background
+if(window.DeviceOrientationEvent){window.addEventListener('deviceorientation',function(event){const y=event.beta;document.body.style.background=`linear-gradient(${y+90}deg,#ff9a9e,#fad0c4,#fbc2eb)`;}, true);}
 </script>
 </body>
 </html>
