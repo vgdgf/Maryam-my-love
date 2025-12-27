@@ -6,94 +6,132 @@
 <title>مريم، حب قلبي ❤️</title>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 <style>
-/* === Base Reset & Global Styles === */
-* {margin:0; padding:0; box-sizing:border-box; font-family:'Cairo', sans-serif; transition: all 0.3s ease;}
-body {overflow-x:hidden; scroll-behavior:smooth; min-height:100vh; background: linear-gradient(120deg,#ff9a9e,#fad0c4,#fbc2eb); color:#fff;}
+/* ===========================
+   RESET & GLOBAL STYLES
+=========================== */
+* {margin:0; padding:0; box-sizing:border-box; font-family:'Cairo',sans-serif; transition: all 0.3s ease;}
+body {
+    min-height:100vh;
+    overflow-x:hidden;
+    scroll-behavior:smooth;
+    background: linear-gradient(120deg,#ff9a9e,#fad0c4,#fbc2eb);
+    color:#fff;
+}
 
-/* === Typography === */
-h1, h2, h3 {text-align:center; font-weight:700; text-shadow:2px 2px 10px rgba(0,0,0,0.25);}
-p {text-align:center; margin:12px 20px; line-height:1.6; text-shadow:1px 1px 5px rgba(0,0,0,0.2);}
+/* ===========================
+   TYPOGRAPHY
+=========================== */
+h1,h2,h3 {text-align:center; font-weight:700; text-shadow:2px 2px 12px rgba(0,0,0,0.25);}
+p {text-align:center; line-height:1.6; text-shadow:1px 1px 5px rgba(0,0,0,0.2);}
 a {text-decoration:none; color:#fff;}
 
-/* === Navigation === */
+/* ===========================
+   NAVIGATION
+=========================== */
 nav {
-  position:fixed; top:0; width:100%; background: rgba(0,0,0,0.35); padding:14px 0; z-index:1000; backdrop-filter: blur(8px);
+    position:fixed; top:0; width:100%; background: rgba(0,0,0,0.35);
+    padding:15px 0; z-index:1000; backdrop-filter: blur(8px);
 }
-nav ul {display:flex; justify-content:center; list-style:none; flex-wrap:wrap;}
+nav ul {
+    display:flex; justify-content:center; list-style:none; flex-wrap:wrap;
+}
 nav ul li {margin:0 15px; margin-bottom:5px;}
-nav ul li a {font-weight:600; padding:6px 12px; border-radius:8px;}
+nav ul li a {
+    font-weight:600; padding:8px 16px; border-radius:8px;
+    transition:0.3s;
+}
 nav ul li a:hover {color:#ffd700; background: rgba(255,255,255,0.1); cursor:pointer;}
 
-/* === Hero Section === */
-.hero {height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; overflow:hidden;}
-.hero h1 {font-size:3.2em; color:#fff; animation:fadeIn 2s ease-in-out;}
+/* ===========================
+   HERO SECTION
+=========================== */
+.hero {
+    height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center;
+    text-align:center; position:relative; overflow:hidden; padding:0 20px;
+}
+.hero h1 {font-size:3.2em; animation:fadeIn 2s ease-in-out;}
 .hero p {font-size:1.5em; margin-top:15px; animation:fadeIn 3s ease-in-out;}
 
-/* === Sections === */
+/* ===========================
+   SECTIONS
+=========================== */
 section {
-  padding:90px 25px; min-height:90vh; text-align:center; background: rgba(0,0,0,0.12);
-  margin-top:60px; border-radius:24px; margin-bottom:25px; backdrop-filter: blur(8px);
+    padding:90px 25px; min-height:90vh;
+    border-radius:24px; margin:60px 20px 25px;
+    backdrop-filter: blur(8px); display:flex; flex-direction:column; align-items:center; justify-content:center;
 }
-section:nth-child(even){background: rgba(0,0,0,0.05);}
+section:nth-child(even) {background: rgba(0,0,0,0.05);}
 .section-title {font-size:2.2em; margin-bottom:25px; text-decoration:underline; text-underline-offset:10px;}
 
-/* === Buttons === */
+/* ===========================
+   BUTTONS
+=========================== */
 button {
-  padding:12px 26px; background:#ff6f91; border:none; border-radius:14px;
-  cursor:pointer; font-size:1em; margin-top:25px; font-weight:700; box-shadow:0 5px 18px rgba(0,0,0,0.25);
+    padding:12px 26px; background:#ff6f91; border:none; border-radius:14px;
+    cursor:pointer; font-size:1em; font-weight:700; margin-top:25px; box-shadow:0 5px 18px rgba(0,0,0,0.25);
+    transition:0.3s;
 }
 button:hover {background:#ff3c78; transform:scale(1.08);}
 
-/* === Floating Hearts / Stars === */
-.heart, .flower, .star {
-  position:absolute; width:24px; height:24px; border-radius:50%; pointer-events:none;
-  animation:float 5s linear infinite;
-}
-.heart {background:linear-gradient(45deg,#ff3c78,#ff6f91);}
-.heart:before, .heart:after {content:""; position:absolute; width:24px; height:24px; border-radius:50%; background:linear-gradient(45deg,#ff3c78,#ff6f91);}
-.heart:before{top:-12px; left:0;} .heart:after{left:12px; top:0;}
-.flower {background:radial-gradient(circle at center,#ffd1dc,#ff69b4);}
-.star {background:radial-gradient(circle at center,#fff200,#ffdd00);}
-@keyframes float {0%{transform:translateY(0) rotateY(0deg); opacity:1;}100%{transform:translateY(-900px) rotateY(360deg); opacity:0;}}
-
-/* === Top Button === */
+/* ===========================
+   TOP BUTTON
+=========================== */
 #topBtn {
-  position:fixed; bottom:30px; right:30px; background:#ff3c78; color:#fff; padding:14px 20px; border:none; border-radius:50%;
-  cursor:pointer; font-size:24px; display:none; z-index:1000; box-shadow:0 4px 12px rgba(0,0,0,0.3);
+    position:fixed; bottom:30px; right:30px; background:#ff3c78; color:#fff;
+    padding:14px 20px; border:none; border-radius:50%; font-size:24px; display:none;
+    cursor:pointer; z-index:1000; box-shadow:0 4px 12px rgba(0,0,0,0.3); transition:0.3s;
 }
 #topBtn:hover {background:#ff6f91; transform:scale(1.12);}
 
-/* === Love Popup === */
+/* ===========================
+   LOVE POPUP
+=========================== */
 #lovePopup {
-  position:fixed; bottom:50px; left:50%; transform:translateX(-50%);
-  background:rgba(255,0,100,0.85); padding:24px 36px; border-radius:26px; box-shadow:0 0 28px rgba(255,0,100,0.7);
-  color:#fff; font-weight:bold; display:none; z-index:1000; animation:popupAnim 0.8s ease-in-out;
+    position:fixed; bottom:50px; left:50%; transform:translateX(-50%);
+    background:rgba(255,0,100,0.85); padding:24px 36px; border-radius:26px;
+    box-shadow:0 0 28px rgba(255,0,100,0.7); color:#fff; font-weight:bold; display:none; z-index:1000;
+    animation:popupAnim 0.8s ease-in-out;
 }
-@keyframes popupAnim {0%{transform:translateX(-50%) translateY(50px); opacity:0;}100%{transform:translateX(-50%) translateY(0); opacity:1;}}
+@keyframes popupAnim {0%{transform:translateX(-50%) translateY(50px); opacity:0;} 100%{transform:translateX(-50%) translateY(0); opacity:1;}}
 
-/* === Fade-in === */
+/* ===========================
+   FADE-IN ANIMATION
+=========================== */
 .fade-in {opacity:0; transform:translateY(25px) rotateX(12deg); transition:1s;}
 .fade-in.show {opacity:1; transform:translateY(0) rotateX(0deg);}
 
-/* === Background Animation === */
+/* ===========================
+   FLOATING ELEMENTS
+=========================== */
+.heart,.flower,.star {position:absolute; width:24px; height:24px; border-radius:50%; pointer-events:none; animation:float 5s linear infinite;}
+.heart {background:linear-gradient(45deg,#ff3c78,#ff6f91);}
+.heart:before,.heart:after {content:""; position:absolute; width:24px; height:24px; border-radius:50%; background:linear-gradient(45deg,#ff3c78,#ff6f91);}
+.heart:before{top:-12px; left:0;} .heart:after{left:12px; top:0;}
+.flower {background:radial-gradient(circle at center,#ffd1dc,#ff69b4);}
+.star {background:radial-gradient(circle at center,#fff200,#ffdd00);}
+@keyframes float {0%{transform:translateY(0) rotateY(0deg); opacity:1;} 100%{transform:translateY(-900px) rotateY(360deg); opacity:0;}}
+
+/* ===========================
+   BACKGROUND ANIMATION
+=========================== */
 @keyframes bgGradient {0%{background:#ff9a9e;}25%{background:#fad0c4;}50%{background:#fbc2eb;}75%{background:#a1c4fd;}100%{background:#ff9a9e;}}
 body {animation:bgGradient 40s ease infinite;}
 
-/* === Responsive Layout === */
+/* ===========================
+   RESPONSIVE
+=========================== */
 @media screen and (max-width:768px){
-  .hero h1{font-size:2.6em;} .hero p{font-size:1.3em;}
-  section{padding:80px 18px;}
-  nav ul{flex-direction:column;} nav ul li{margin:8px 0;}
-  button{padding:10px 20px; font-size:0.95em;}
+    .hero h1{font-size:2.6em;} .hero p{font-size:1.3em;}
+    section{padding:80px 18px;} nav ul{flex-direction:column;} nav ul li{margin:8px 0;}
+    button{padding:10px 20px; font-size:0.95em;}
 }
 @media screen and (max-width:480px){
-  .hero h1{font-size:2.0em;} .hero p{font-size:1em;}
-  button{padding:8px 16px; font-size:0.85em;}
+    .hero h1{font-size:2.0em;} .hero p{font-size:1em;}
+    button{padding:8px 16px; font-size:0.85em;}
 }
 </style>
 </head>
 <body>
-
 <!-- Music -->
 <audio id="bgMusic" src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" loop autoplay></audio>
 <audio id="clickSound" src="https://freesound.org/data/previews/514/514904_10076300-lq.mp3"></audio>
@@ -125,7 +163,7 @@ body {animation:bgGradient 40s ease infinite;}
 <section id="about">
   <h2 class="section-title fade-in">معلومات عن مريم</h2>
   <p class="fade-in">الاسم: مريم</p>
-  <p class="fade-in">تاريخ الميلاد: 21 نوفمبر 2008 (العمر: 17 سنة)</p>
+  <p class="fade-in">تاريخ الميلاد: 21 نوفمبر 2008</p>
   <p class="fade-in">المميزات: لطيفة، حنونة، محترمة، جميلة جدًا، ذكية وحنينية</p>
   <p class="fade-in">العيوب: عنيدة قليلًا، أحيانًا لا تثق بي، لكنها الأفضل بالنسبة لي ❤️</p>
 </section>
@@ -145,7 +183,7 @@ body {animation:bgGradient 40s ease infinite;}
 </section>
 
 <section id="dreams">
-  <h2 class="section-title fade-in">أحلامنا المستقبلية</h2>
+  <h2 class="section-title fade-in">أحلامنا</h2>
   <p class="fade-in">أن نلتقي يومًا ونضحك معًا ونعيش كل لحظة كما نحلم</p>
   <p class="fade-in">أن نشارك الحب والسعادة ونجعل كل يوم ذكرى جميلة ❤️</p>
 </section>
@@ -191,4 +229,4 @@ setInterval(showLovePopup,8000);
 if(window.DeviceOrientationEvent){window.addEventListener('deviceorientation',function(event){const y=event.beta;document.body.style.background=`linear-gradient(${y+90}deg,#ff9a9e,#fad0c4,#fbc2eb)`;}, true);}
 </script>
 </body>
-            </html>
+</html>
